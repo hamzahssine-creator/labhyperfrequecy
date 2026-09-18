@@ -14,3 +14,6 @@ The public site has no administration link.
 
 ## Data
 The catalog and categories use browser localStorage. This means changes made in the admin page are visible on the same browser/device. GitHub Pages itself does not provide a shared database.
+
+
+Publication: depuis /admin, utilisez « Publier le catalogue » pour télécharger catalog.js, puis téléversez catalog.js à la racine du dépôt GitHub. Les visiteurs utiliseront alors les données publiées.

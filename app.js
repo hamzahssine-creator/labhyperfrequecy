@@ -8,8 +8,8 @@ const starter=[
 {id:6,title:"Chambre de mesure",category:"Accessoires de laboratoire",price:"—",image:"assets/chamber.svg",images:[],description:"Environnement expérimental dédié à l'observation et à la caractérisation des phénomènes électromagnétiques.",details:["Mesures RF","Isolation","Expérimentation"],extra:["Une zone de travail pensée pour les manipulations."]}
 ];
 function read(k,f){try{const x=localStorage.getItem(k);return x?JSON.parse(x):f}catch{return f}}
-function items(){return read('lh_items',starter)}
-function cats(){return read('lh_categories',defaultCategories)}
+function items(){return window.LH_PUBLISHED?.items || read('lh_items',starter)}
+function cats(){return window.LH_PUBLISHED?.categories || read('lh_categories',defaultCategories)}
 function esc(s=''){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 const app=document.getElementById('app');
 function renderHome(){
